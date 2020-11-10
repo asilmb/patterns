@@ -1,6 +1,8 @@
 <?php
-
-/* @var $this yii\web\View */
+/**
+ * @var $this yii\web\View
+ * @var array $pageList
+ */
 
 $this->title = 'Skills';
 ?>
@@ -10,10 +12,12 @@ $this->title = 'Skills';
         <h1>Skills!</h1>
 
     </div>
+
     <ol>
-        <li> <a href="skill/double-dispatch">Double Dispatch (двойная диспетчеризация)</a> </li>
-        <li> <a href="skill/late-dynamic-linking">Late / dynamic linking (Позднее/динамическое связывание)</a> </li>
-        <li> <a href="skill/late-dynamic-linking">Late / dynamic linking (Позднее/динамическое связывание)</a> </li>
+		<?php
+		foreach ($pageList as $page) : ?>
+            <a href = <?php "{$this->context->id}/{$page->id}" ?>> <?= $page->title ?></a >
+		<?php endforeach; ?>
 
     </ol>
 

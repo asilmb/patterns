@@ -4,19 +4,41 @@
 namespace frontend\components\pageMapping;
 
 
+use frontend\actions\ArticlePageAction;
+
 class Page
 {
-	private $uri;
-	private $viewName;
+	private $id;
+	private $title;
+	private $class = ArticlePageAction::class;
 
 	/**
 	 * Page constructor.
-	 * @param string $uri
-	 * @param string $viewName
+	 * @param string $id
+	 * @param string $title
 	 */
-	public function __construct(string $uri,string $viewName)
+	public function __construct(string $id, string $title)
 	{
-		$this->uri = $uri;
-		$this->viewName = $viewName;
+		$this->id = $id;
+		$this->title = $title;
 	}
+
+
+	public function toArray()
+	{
+		return [
+			'class' => $this->class,
+			'title' => $this->title
+		];
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getId(): string
+	{
+		return $this->id;
+	}
+
+
 }

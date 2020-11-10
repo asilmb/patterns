@@ -10,12 +10,14 @@ use yii\web\Controller;
  */
 class SkillController extends Controller
 {
+	use PageMapperTrait;
+
 	/**
 	 * {@inheritdoc}
 	 */
 	public function actions()
 	{
-		return [
+		return array_merge($this->getMappedPages(), [
 			'error' => [
 				'class' => 'yii\web\ErrorAction',
 			],
@@ -23,26 +25,13 @@ class SkillController extends Controller
 				'class' => 'yii\captcha\CaptchaAction',
 				'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
 			],
-		];
+		]);
 	}
 
 	public function actionIndex()
 	{
-		return $this->render('index');
+		return $this->render('index', ['pageList' => $this->getMappedPages()]);
 	}
 
-	public function actionDoubleDispatch()
-	{
-		return $this->render('doubleDispatch');
-	}
 
-	public function actionLateDynamicBinding()
-	{
-		return $this->render('lateDynamicBinding');
-	}
-
-	public function actionEarlyStaticBinding()
-	{
-		return $this->render('earlyStaticBinding');
-	}
 }
