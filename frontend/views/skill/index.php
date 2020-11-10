@@ -15,8 +15,10 @@ $this->title = 'Skills';
 
     <ol>
 		<?php
-		foreach ($pageList as $page) : ?>
-            <a href = <?php "{$this->context->id}/{$page->id}" ?>> <?= $page->title ?></a >
+		foreach ($pageList as $key => $page) : ?>
+            <li>
+                <a href= <?= $key ?>> <?= $page['title'] ?></a>
+            </li>
 		<?php endforeach; ?>
 
     </ol>

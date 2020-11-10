@@ -34,9 +34,20 @@ class PageMapperTest extends \Codeception\Test\Unit
 		}
 	}
 
+	/**
+	 * @throws PageMapperParamsEmptyException
+	 */
 	public function testPagesList()
 	{
 		$this->_prepareTestPages();
-		$model = $this->getMappedPages();
+		$models = $this->getMappedPages();
+		/** @var Page $model */
+		$this->assertEquals(
+			[
+				'class' => 'frontend\actions\ArticlePageAction',
+				'title' => 'Late / dynamic linking (Позднее/динамическое связывание)'
+			],
+			$models['late-dynamic-binding']
+		);
 	}
 }

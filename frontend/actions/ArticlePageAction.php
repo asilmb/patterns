@@ -6,10 +6,11 @@ use yii\base\Action;
 
 class ArticlePageAction extends Action
 {
-	public $viewName;
+	public $title;
 
 	public function run()
 	{
-		return $this->controller->render($this->id );
+		$this->controller->view->title = $this->title;
+		return $this->controller->render($this->id);
 	}
 }
