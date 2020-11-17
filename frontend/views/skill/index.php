@@ -1,27 +1,32 @@
 <?php
-/**
- * @var $this yii\web\View
- * @var array $pageList
- */
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Skills';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-index">
+<div class="skill-index">
 
-    <div class="jumbotron">
-        <h1>Skills!</h1>
+    <h1><?= Html::encode($this->title) ?></h1>
 
-    </div>
+    <p>
+        <?= Html::a('Create Skill', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
-    <ol>
-		<?php
-		foreach ($pageList as $key => $page) : ?>
-            <li>
-                <a href= <?= $key ?>> <?= $page['title'] ?></a>
-            </li>
-		<?php endforeach; ?>
 
-    </ol>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+            'id',
+			'slug',
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
 
 
 </div>
