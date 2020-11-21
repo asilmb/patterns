@@ -2,6 +2,8 @@
 
 namespace frontend\controllers;
 
+use frontend\patterns\behavior\state\ConcreteStateA;
+use frontend\patterns\behavior\state\Context;
 use frontend\patterns\behavior\visitor\Visitor1;
 use frontend\patterns\behavior\visitor\Visitor2;
 use frontend\patterns\behavior\visitor\VisitorComponentA;
@@ -60,11 +62,13 @@ class BehaviorPatternsController extends Controller
 	 */
 	public function actionState()
 	{
-		$components = [
-			new VisitorComponentA(),
-			new VisitorComponentB(),
-		];
-		return $this->render('state');
+		/**
+		 * Клиентский код.
+		 */
+		$context = new Context(new ConcreteStateA());
+		$requestOfContext1 = $context->request1();
+		$requestOfContext2 = $context->request2();
+		return $this->render('state', compact('requestOfContext1', 'requestOfContext2'));
 	}
 
 	/**
