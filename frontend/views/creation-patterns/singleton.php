@@ -1,6 +1,6 @@
 <?php ?>
 
-<h1>Visitor</h1>
+<h1>Singleton</h1>
 
 <p>
     В контроллере CreationPatternsController по методу actionSingleton есть пример реализации Singleton
