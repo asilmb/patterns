@@ -1,7 +1,7 @@
 <?php
 
 
-namespace frontend\patterns\behaivior\visitor;
+namespace frontend\patterns\behavior\visitor;
 
 /**
  * Конкретные Посетители реализуют несколько версий одного и того же алгоритма,
@@ -14,12 +14,12 @@ namespace frontend\patterns\behaivior\visitor;
  */
 class Visitor1 implements VisitorInterface
 {
-	public function visitConcreteComponentA(VisitorComponentComponentA $element): string
+	public function visitConcreteComponentA(VisitorComponentA $element): string
 	{
 		return $element->exclusiveMethodOfConcreteComponentA() . " + Visitor1\n";
 	}
 
-	public function visitConcreteComponentB(VisitorComponentComponentB $element): string
+	public function visitConcreteComponentB(VisitorComponentB $element): string
 	{
 		return $element->specialMethodOfConcreteComponentB() . " + Visitor1\n";
 	}

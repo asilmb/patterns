@@ -1,7 +1,7 @@
 <?php
 
 
-namespace frontend\patterns\behaivior\visitor;
+namespace frontend\patterns\behavior\visitor;
 
 
 /**
@@ -15,12 +15,12 @@ namespace frontend\patterns\behaivior\visitor;
  */
 class Visitor2 implements VisitorInterface
 {
-	public function visitConcreteComponentA(VisitorComponentComponentA $element): string
+	public function visitConcreteComponentA(VisitorComponentA $element): string
 	{
 		return $element->exclusiveMethodOfConcreteComponentA() . " + Visitor2\n";
 	}
 
-	public function visitConcreteComponentB(VisitorComponentComponentB $element): string
+	public function visitConcreteComponentB(VisitorComponentB $element): string
 	{
 		return $element->specialMethodOfConcreteComponentB() . " + Visitor2\n";
 	}

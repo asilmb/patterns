@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\patterns\behaivior\visitor;
+namespace frontend\patterns\behavior\visitor;
 
 interface VisitorComponentInterface
 {

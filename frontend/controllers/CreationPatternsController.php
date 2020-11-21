@@ -2,11 +2,7 @@
 
 namespace frontend\controllers;
 
-use frontend\patterns\behaivior\visitor\Visitor1;
-use frontend\patterns\behaivior\visitor\Visitor2;
-use frontend\patterns\behaivior\visitor\VisitorComponentComponentA;
-use frontend\patterns\behaivior\visitor\VisitorComponentComponentB;
-use frontend\patterns\behaivior\visitor\VisitorInterface;
+use frontend\patterns\behavior\visitor\VisitorInterface;
 use frontend\patterns\creation\singleton\Singleton;
 use yii\web\Controller;
 

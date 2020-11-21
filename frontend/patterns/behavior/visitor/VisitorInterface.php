@@ -1,7 +1,7 @@
 <?php
 
 
-namespace frontend\patterns\behaivior\visitor;
+namespace frontend\patterns\behavior\visitor;
 
 
 /**
@@ -11,7 +11,7 @@ namespace frontend\patterns\behaivior\visitor;
  */
 interface VisitorInterface
 {
-	public function visitConcreteComponentA(VisitorComponentComponentA $element): string;
+	public function visitConcreteComponentA(VisitorComponentA $element): string;
 
-	public function visitConcreteComponentB(VisitorComponentComponentB $element): string;
+	public function visitConcreteComponentB(VisitorComponentB $element): string;
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace frontend\patterns\behaivior\visitor;
+namespace frontend\patterns\behavior\visitor;
 
-class VisitorComponentComponentB implements VisitorComponentInterface
+class VisitorComponentB implements VisitorComponentInterface
 {
 	/**
 	 * То же самое здесь: visitConcreteComponentB => ConcreteComponentB

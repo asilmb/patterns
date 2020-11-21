@@ -2,11 +2,11 @@
 
 namespace frontend\controllers;
 
-use frontend\patterns\behaivior\visitor\Visitor1;
-use frontend\patterns\behaivior\visitor\Visitor2;
-use frontend\patterns\behaivior\visitor\VisitorComponentComponentA;
-use frontend\patterns\behaivior\visitor\VisitorComponentComponentB;
-use frontend\patterns\behaivior\visitor\VisitorInterface;
+use frontend\patterns\behavior\visitor\Visitor1;
+use frontend\patterns\behavior\visitor\Visitor2;
+use frontend\patterns\behavior\visitor\VisitorComponentA;
+use frontend\patterns\behavior\visitor\VisitorComponentB;
+use frontend\patterns\behavior\visitor\VisitorInterface;
 use yii\web\Controller;
 
 /**
@@ -41,8 +41,8 @@ class BehaviorPatternsController extends Controller
 	public function actionVisitor()
 	{
 		$components = [
-			new VisitorComponentComponentA(),
-			new VisitorComponentComponentB(),
+			new VisitorComponentA(),
+			new VisitorComponentB(),
 		];
 
 		$visitor1 = new Visitor1();
@@ -53,6 +53,18 @@ class BehaviorPatternsController extends Controller
 		$visitor2Answers = $this->visitorClientCode($components, $visitor2);
 
 		return $this->render('visitor', compact('visitor1Answers', 'visitor2Answers'));
+	}
+
+	/**
+	 * @return string
+	 */
+	public function actionState()
+	{
+		$components = [
+			new VisitorComponentA(),
+			new VisitorComponentB(),
+		];
+		return $this->render('state');
 	}
 
 	/**

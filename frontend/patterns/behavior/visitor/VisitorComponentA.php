@@ -1,12 +1,12 @@
 <?php
 
-namespace frontend\patterns\behaivior\visitor;
+namespace frontend\patterns\behavior\visitor;
 
 /**
  * Каждый Конкретный Компонент должен реализовать метод accept таким образом,
  * чтобы он вызывал метод посетителя, соответствующий классу компонента.
  */
-class VisitorComponentComponentA implements VisitorComponentInterface
+class VisitorComponentA implements VisitorComponentInterface
 {
 	/**
 	 * Обратите внимание, мы вызываем visitConcreteComponentA, что соответствует
