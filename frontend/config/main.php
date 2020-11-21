@@ -46,6 +46,9 @@ return [
 			'enablePrettyUrl' => true,
 			'showScriptName' => false,
 			'rules' => [
+				'skill/<id:\d+>' => 'skill/view',
+				'skill/delete/<id:\d+>' => 'skill/delete',
+				'skill/update/<id:\d+>' => 'skill/update',
 			],
 		],
 		'page' => [

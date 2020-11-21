@@ -37,7 +37,7 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Behavioral patterns', 'url' => ['/behavior']],
+        ['label' => 'Behavioral patterns', 'url' => ['/behavior-patterns']],
 		['label' => 'Skills', 'url' => ['/skill']],
     ];
 
