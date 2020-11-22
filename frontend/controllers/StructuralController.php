@@ -6,6 +6,7 @@ namespace frontend\controllers;
 use frontend\patterns\structural\composite\Component;
 use frontend\patterns\structural\composite\Composite;
 use frontend\patterns\structural\composite\Leaf;
+use frontend\patterns\structural\flyweight\FlyweightFactory;
 use yii\web\Controller;
 
 class StructuralController extends Controller
@@ -89,5 +90,53 @@ class StructuralController extends Controller
 		return "RESULT: " . $component1->operation();
 	}
 
+	/**
+	 * @return string
+	 */
+	public function actionFlyweight()
+	{
+		/**
+		 * Клиентский код обычно создает кучу предварительно заполненных легковесов на
+		 * этапе инициализации приложения.
+		 */
+		$factory = new FlyweightFactory([
+			["Chevrolet", "Camaro2018", "pink"],
+			["Mercedes Benz", "C300", "black"],
+			["Mercedes Benz", "C500", "red"],
+			["BMW", "M5", "red"],
+			["BMW", "X6", "white"],
+		]);
+		$listFlyweights = $factory->listFlyweights();
 
+
+		$this->addCarToPoliceDatabase($factory,
+			"CL234IR",
+			"James Doe",
+			"BMW",
+			"M5",
+			"red",
+		);
+
+		$this->addCarToPoliceDatabase($factory,
+			"CL234IR",
+			"James Doe",
+			"BMW",
+			"X1",
+			"red",
+		);
+		return $this->render('flyweight', compact('listFlyweights'));
+
+	}
+
+	private function addCarToPoliceDatabase(
+		FlyweightFactory $ff, $plates, $owner,
+		$brand, $model, $color
+	) {
+		//"\nClient: Adding a car to database.\n";
+		$flyweight = $ff->getFlyweight([$brand, $model, $color]);
+
+		// Клиентский код либо сохраняет, либо вычисляет внешнее состояние и
+		// передает его методам легковеса.
+		$flyweight->operation([$plates, $owner]);
+	}
 }

@@ -17,6 +17,9 @@ $this->title = 'Structural';
             </ul>
 
         </li>
+        <li>
+            <a href="structural/flyweight">Flyweight</a>
+        </li>
     </ol>
 
 
