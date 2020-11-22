@@ -17,6 +17,9 @@ $this->title = 'Creation';
         <li>
             <a href="creation/prototype">Prototype</a>
         </li>
+        <li>
+            <a href="creation/builder">Builder</a>
+        </li>
     </ol>
 
 

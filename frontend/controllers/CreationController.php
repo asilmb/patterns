@@ -3,6 +3,8 @@
 namespace frontend\controllers;
 
 use frontend\patterns\behavior\visitor\VisitorInterface;
+use frontend\patterns\creation\builder\ConcreteBuilder1;
+use frontend\patterns\creation\builder\Director;
 use frontend\patterns\creation\prototype\ComponentWithBackReference;
 use frontend\patterns\creation\prototype\Prototype;
 use frontend\patterns\creation\singleton\Singleton;
@@ -44,7 +46,16 @@ class CreationController extends Controller
 
 		return $this->render('singleton', compact('s1', 's2'));
 	}
-
+	/**
+	 * @return string
+	 */
+	public function actionBuilder()
+	{
+		$director = new Director();
+		$builder = new ConcreteBuilder1();
+		$director->setBuilder($builder);
+		return $this->render('builder', compact('builder', 'director'));
+	}
 	/**
 	 * @return string
 	 * @throws \Exception
