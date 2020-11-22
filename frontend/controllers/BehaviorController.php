@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use frontend\patterns\behavior\iterator\WordsCollection;
 use frontend\patterns\behavior\state\ConcreteStateA;
 use frontend\patterns\behavior\state\Context;
 use frontend\patterns\behavior\visitor\Visitor1;
@@ -88,4 +89,21 @@ class BehaviorController extends Controller
 		return $answers;
 	}
 
+	/**
+	 * @return string
+	 */
+	public function actionIterator()
+	{
+		/**
+		 * Клиентский код может знать или не знать о Конкретном Итераторе или классах
+		 * Коллекций, в зависимости от уровня косвенности, который вы хотите сохранить в
+		 * своей программе.
+		 */
+		$collection = new WordsCollection();
+		$collection->addItem("First");
+		$collection->addItem("Second");
+		$collection->addItem("Third");
+
+		return $this->render('iterator', compact('collection'));
+	}
 }
