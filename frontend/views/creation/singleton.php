@@ -3,7 +3,7 @@
 <h1>Singleton</h1>
 
 <p>
-    В контроллере CreationPatternsController по методу actionSingleton есть пример реализации Singleton
+    В контроллере CreationController по методу actionSingleton есть пример реализации Singleton
 </p>
 <p>
     <a href="https://refactoring.guru/ru/design-patterns/singleton">Ссылка на подробную статью</a>
