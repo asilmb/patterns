@@ -14,7 +14,7 @@ use yii\web\Controller;
 /**
  * Site controller
  */
-class BehaviorPatternsController extends Controller
+class BehaviorController extends Controller
 {
 	/**
 	 * {@inheritdoc}

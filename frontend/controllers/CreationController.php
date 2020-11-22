@@ -9,7 +9,7 @@ use yii\web\Controller;
 /**
  * Site controller
  */
-class CreationPatternsController extends Controller
+class CreationController extends Controller
 {
 	/**
 	 * {@inheritdoc}

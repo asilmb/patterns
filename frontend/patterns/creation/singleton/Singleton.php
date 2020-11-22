@@ -50,7 +50,7 @@ class Singleton
 	 * Эта реализация позволяет вам расширять класс Одиночки, сохраняя повсюду
 	 * только один экземпляр каждого подкласса.
 	 */
-	public static function getInstance(): Singleton
+	public static function getInstance(): self
 	{
 		$cls = static::class;
 		if (!isset(self::$instances[$cls])) {

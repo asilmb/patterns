@@ -2,17 +2,17 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Behavior';
+$this->title = 'Creation';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Behaviors!</h1>
+        <h1>Creation!</h1>
 
     </div>
     <ol>
         <li>
-            <a href="creation-patterns/singleton">Singleton</a>
+            <a href="creation/singleton">Singleton</a>
         </li>
     </ol>
 
