@@ -7,6 +7,9 @@ use frontend\patterns\structural\composite\Component;
 use frontend\patterns\structural\composite\Composite;
 use frontend\patterns\structural\composite\Leaf;
 use frontend\patterns\structural\flyweight\FlyweightFactory;
+use frontend\patterns\structural\observer\ConcreteObserverA;
+use frontend\patterns\structural\observer\ConcreteObserverB;
+use frontend\patterns\structural\observer\Subject;
 use yii\web\Controller;
 
 class StructuralController extends Controller
@@ -125,7 +128,6 @@ class StructuralController extends Controller
 			"red",
 		);
 		return $this->render('flyweight', compact('listFlyweights'));
-
 	}
 
 	private function addCarToPoliceDatabase(
@@ -139,4 +141,22 @@ class StructuralController extends Controller
 		// передает его методам легковеса.
 		$flyweight->operation([$plates, $owner]);
 	}
+
+
+	/**
+	 * @return string
+	 */
+	public function actionObserver()
+	{
+
+		/**
+		 * Клиентский код.
+		 */
+
+
+
+
+		return $this->render('observer');
+	}
+
 }
