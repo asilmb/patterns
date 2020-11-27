@@ -28,9 +28,6 @@
 	foreach ($subject->someBusinessLogic() as $logic) {
 		echo $logic;
 	}
-	foreach ($subject->someBusinessLogic() as $logic) {
-		echo $logic;
-	}
 
 	$subject->detach($o2);
 
