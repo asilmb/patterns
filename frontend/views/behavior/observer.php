@@ -1,21 +1,20 @@
 <?php ?>
 
-<h1>Flyweight</h1>
+<h1>Observer</h1>
 
 <p>
-    В контроллере StructuralController по методу actionFlyweight есть пример реализации Flyweight
+    В контроллере BehaviorController по методу actionObserver есть пример реализации Observer
 </p>
 <p>
-    <a href="https://refactoring.guru/ru/design-patterns/flyweight">Ссылка на подробную статью</a>
+    <a href="https://refactoring.guru/ru/design-patterns/observer">Ссылка на подробную статью</a>
 </p>
-
 
 <pre>
 <?php
 
-	use frontend\patterns\structural\observer\ConcreteObserverA;
-	use frontend\patterns\structural\observer\ConcreteObserverB;
-	use frontend\patterns\structural\observer\Subject;
+	use frontend\patterns\behavior\observer\ConcreteObserverA;
+	use frontend\patterns\behavior\observer\ConcreteObserverB;
+	use frontend\patterns\behavior\observer\Subject;
 
 	$subject = new Subject();
 

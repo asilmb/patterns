@@ -1,7 +1,7 @@
 <?php
 
 
-namespace frontend\patterns\structural\observer;
+namespace frontend\patterns\behavior\observer;
 
 /**
  * Конкретные Наблюдатели реагируют на обновления, выпущенные Издателем, к

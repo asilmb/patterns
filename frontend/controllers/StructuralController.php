@@ -143,20 +143,6 @@ class StructuralController extends Controller
 	}
 
 
-	/**
-	 * @return string
-	 */
-	public function actionObserver()
-	{
 
-		/**
-		 * Клиентский код.
-		 */
-
-
-
-
-		return $this->render('observer');
-	}
 
 }

@@ -106,4 +106,16 @@ class BehaviorController extends Controller
 
 		return $this->render('iterator', compact('collection'));
 	}
+
+	/**
+	 * @return string
+	 */
+	public function actionObserver()
+	{
+
+		/**
+		 * Клиентский код.
+		 */
+		return $this->render('observer');
+	}
 }

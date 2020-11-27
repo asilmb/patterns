@@ -30,6 +30,9 @@ $this->title = 'Behavior';
         <li><a href="behavior/iterator">Iterator</a></li>
 
         <li><a href="behavior/strategy">Strategy</a></li>
+        <li>
+            <a href="behavior/observer">Observer</a>
+        </li>
     </ol>
 
 
