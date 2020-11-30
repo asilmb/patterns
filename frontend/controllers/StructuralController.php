@@ -129,7 +129,13 @@ class StructuralController extends Controller
 		);
 		return $this->render('flyweight', compact('listFlyweights'));
 	}
-
+	/**
+	 * @return string
+	 */
+	public function actionAdapter()
+	{
+		return $this->render('adapter');
+	}
 	private function addCarToPoliceDatabase(
 		FlyweightFactory $ff, $plates, $owner,
 		$brand, $model, $color
@@ -141,8 +147,5 @@ class StructuralController extends Controller
 		// передает его методам легковеса.
 		$flyweight->operation([$plates, $owner]);
 	}
-
-
-
 
 }

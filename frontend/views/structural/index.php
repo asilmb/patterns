@@ -20,7 +20,9 @@ $this->title = 'Structural';
         <li>
             <a href="structural/flyweight">Flyweight</a>
         </li>
-
+        <li>
+            <a href="structural/adapter">Adapter</a>
+        </li>
     </ol>
 
 
