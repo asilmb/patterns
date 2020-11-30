@@ -23,6 +23,9 @@ $this->title = 'Structural';
         <li>
             <a href="structural/adapter">Adapter</a>
         </li>
+        <li>
+            <a href="structural/decorator">Decorator</a>
+        </li>
     </ol>
 
 
