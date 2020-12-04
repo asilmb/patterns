@@ -26,6 +26,9 @@ $this->title = 'Structural';
         <li>
             <a href="structural/decorator">Decorator</a>
         </li>
+        <li>
+            <a href="structural/proxy">Proxy</a>
+        </li>
     </ol>
 
 

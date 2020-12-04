@@ -143,6 +143,14 @@ class StructuralController extends Controller
 	{
 		return $this->render('decorator');
 	}
+
+	/**
+	 * @return string
+	 */
+	public function actionProxy()
+	{
+		return $this->render('proxy');
+	}
 	private function addCarToPoliceDatabase(
 		FlyweightFactory $ff, $plates, $owner,
 		$brand, $model, $color
