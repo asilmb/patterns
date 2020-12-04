@@ -29,6 +29,9 @@ $this->title = 'Structural';
         <li>
             <a href="structural/proxy">Proxy</a>
         </li>
+        <li>
+            <a href="structural/facade">Facade</a>
+        </li>
     </ol>
 
 
