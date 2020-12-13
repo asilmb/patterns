@@ -32,6 +32,9 @@ $this->title = 'Structural';
         <li>
             <a href="structural/facade">Facade</a>
         </li>
+        <li>
+            <a href="structural/bridge">Bridge</a>
+        </li>
     </ol>
 
 
