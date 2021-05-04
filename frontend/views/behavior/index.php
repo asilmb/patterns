@@ -36,6 +36,9 @@ $this->title = 'Behavior';
         <li>
             <a href="behavior/memento">Memento</a>
         </li>
+        <li>
+            <a href="behavior/command">Command</a>
+        </li>
     </ol>
 
 

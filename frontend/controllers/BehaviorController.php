@@ -129,4 +129,15 @@ class BehaviorController extends Controller
 		 */
 		return $this->render('memento');
 	}
+	/**
+	 * @return string
+	 */
+	public function actionCommand()
+	{
+
+		/**
+		 * Клиентский код.
+		 */
+		return $this->render('command');
+	}
 }
